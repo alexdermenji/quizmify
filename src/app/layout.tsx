@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { cn } from "../lib/utils";
 import NavBar from "@/components/NavBar";
+import Providers from "@/components/Providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,9 @@ export default function RootLayout({
         className={cn(inter.className, "antialiased min-h-screen pt-16")}
         suppressHydrationWarning={true}
       >
-        <NavBar />
+        <Providers>
+          <NavBar />
+        </Providers>
         {children}
       </body>
     </html>

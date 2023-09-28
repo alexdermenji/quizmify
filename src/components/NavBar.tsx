@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-// import { ThemeToggle } from "./ThemeToggle";
+import { ThemeToggle } from "./ThemeToggle";
 import { getAuthSession } from "@/lib/nextauth";
 import SignInButton from "./SignInButton";
 import UserAccountNav from "./UserAccountNav";
@@ -18,7 +18,7 @@ const Navbar = async () => {
           </p>
         </Link>
         <div className="flex items-center">
-          {/* <ThemeToggle className="mr-4" /> */}
+          <ThemeToggle className="mr-4" />
           {session?.user ? (
             <UserAccountNav user={session.user} />
           ) : (
